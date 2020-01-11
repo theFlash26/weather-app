@@ -1,0 +1,38 @@
+<ion-content >
+  <div padding id="cloud-layer">
+
+    <ion-row>
+      <ion-col class="logo">
+        <img src="assets/imgs/icon.png" />
+        <ion-title>PAWANG CUACA</ion-title>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
+
+          <ion-item>
+            <!-- <ion-label>Username</ion-label> -->
+            <ion-input [(ngModel)]="username" type="text" placeholder="Nama"></ion-input>
+            <ion-label error-field color="secondary" no-margin *ngIf="!isUsernameValid">{{error.errorUsername}}</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <!-- <ion-label>Password</ion-label> -->
+            <ion-input [(ngModel)]="kodepos" type="number" placeholder="Kode Pos"></ion-input>
+            <ion-label error-field color="secondary" no-margin *ngIf="!isKodeposValid">{{error.errorKodepos}}</ion-label>
+          </ion-item>
+
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button class="login-button" (click)="login()">Login</button>
+      </ion-col>
+    </ion-row>
+  
+  </div>
+</ion-content>

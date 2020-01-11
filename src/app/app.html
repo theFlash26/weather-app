@@ -1,0 +1,24 @@
+<ion-menu [content]="content">
+    <ion-header header-background-image>
+      <!-- [ngStyle]="{'background-image': 'url(' + params.background + ')'}" -->
+        <ion-thumbnail menuClose> 
+                <!-- (click)="openProfile()" -->
+            <img src="assets/imgs/icon.png">
+        </ion-thumbnail>
+        <h2 item-title text-center>Pawang Cuaca</h2>
+    </ion-header>
+    <!-- Menu Main List -->
+    <ion-content main-menu>
+        <ion-list no-margin no-padding>
+            <button menuClose ion-item paddinge-left no-lines item-title *ngFor="let p of pages" (click)="openPage(p)">
+              <ion-icon name="{{p.icon}}" icon-small item-left>
+                <!-- <i class="icon {{p.icon}}"></i> -->
+              </ion-icon>
+              {{p.title}}
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,7 @@
+{
+  "name": "warungakinini-apps",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
